@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      p {
+        color: yellow;
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My First Page</title>
+    <h1 style="color: red">Welcome to ABC Technologies</h1>
+    <p>This is <b>sample</b> <i>1st paragraph</i></p>
+    <p>This is <b>sample</b> <i>2nd paragraph</i></p>
+    <img
+      src="./training-1.jpg"
+      alt="Placeholder Image"
+      height="400px"
+      width="350px"
+    />
+  </head>
+  <body>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JS</li>
+    <ol type="a">
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JS</li>
+    </ol>
+    <ul type="circle">
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JS</li>
+    </ul>
+
+    <table border="1" width="75%">
+      <thead>
+        <tr>
+          <th colspan="3">Employee Details</th>
+          <th rowspan="2">Month/Date</th>
+        </tr>
+
+        <tr>
+          <th>name</th>
+          <th>age</th>
+          <th>salary</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">elango</td>
+          <td>28</td>
+          <td>30000</td>
+          <td rowspan="2">June</td>
+        </tr>
+
+        <tr>
+          <td align="center">elango</td>
+          <td>28</td>
+          <td>30000</td>
+        </tr>
+      </tbody>
+    </table>
+    <br />
+    <hr />
+    <fieldset>
+      <legend>Registration</legend>
+      <form action="home.html">
+        <table>
+          <tr>
+            <td>Name:</td>
+            <td>
+              <input type="text" size="20" /><!-- doubt size is not working-->
+            </td>
+          </tr>
+          <tr>
+            <td>Password:</td>
+            <td>
+              <input type="password" />
+            </td>
+          </tr>
+          <tr>
+            <td>Gender:</td>
+            <td>
+              <input type="radio" name="gender" checked />Male<input
+                type="radio"
+                name="gender"
+              />Female
+            </td>
+          </tr>
+          <tr>
+            <td>Skills:</td>
+            <td>
+              <input type="checkbox" checked />HTML<input
+                type="checkbox"
+              />CSS<input type="checkbox" />JS
+            </td>
+          </tr>
+          <tr>
+            <td>Qualification :</td>
+            <td>
+              <select>
+                <option value="ME" selected>ME</option>
+                <option value="MSC">MSC</option>
+                <option value="M.Phil">M.Phil</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>Address :</td>
+            <td>
+              <textarea rows="5" cols="50"></textarea>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input
+                type="button"
+                value="Submit"
+              /><!--doubt submit is not working-->
+            </td>
+            <td>
+              <input type="reset" value="Reset" />
+            </td>
+          </tr>
+        </table>
+      </form>
+    </fieldset>
+  </body>
+</html>
