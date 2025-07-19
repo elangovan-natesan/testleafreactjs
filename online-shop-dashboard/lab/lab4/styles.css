@@ -10,8 +10,8 @@ header {
   color: white;
   text-align: center;
   padding: 1rem; /*padding can be 10% or 10pt & padding: 1rem is 16px  */
-  position: sticky; /*keeps the header always visible*/
-  top: 0; /*keeps the header always visible*/
+  /* position: sticky; keeps the header always visible
+  top: 0; keeps the header always visible */
 }
 
 nav {
@@ -97,6 +97,6 @@ footer {
   padding: 1rem; /*1rem=16px*/
   background-color: #333;
   color: white;
-  position: sticky; /*keeps the footer always visible*/
-  bottom: 0; /*keeps the footer always visible*/
+  /* position: sticky; keeps the footer always visible
+  bottom: 0; keeps the footer always visible */
 }
