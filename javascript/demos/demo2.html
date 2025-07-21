@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>adding</title>
+  </head>
+  <body onload="load()">
+    <label for="operation">Choose Operation : </label>
+    <select name="operation" id="operation">
+      <option value="addition">Addition</option>
+      <option value="subtraction" selected>Subtraction</option>
+      <option value="multiplication">Multiplication</option>
+      <option value="division">Division</option>
+    </select>
+    <br />
+    <br />
+    <label for="num1">Number 1 :</label>
+    <input id="num1" type="text" name="num1" placeholder="Enter number 1" />
+    <br />
+    <br />
+    <label for="num2">Number 2 :</label>
+    <input
+      id="num2"
+      type="text"
+      name="num2"
+      placeholder="Enter number 2"
+    /><br />
+    <br />
+    <button type="button" onclick="performOperation()">Perform</button
+    ><!--here onclick is used and button tag is not used inside form tag so type="submit is not required and type="button" is required and value attribute is not required-->
+    <br />
+    <br />
+    <input type="checkbox" id="bold" name="bold" value="bold" /><label
+      for="bold"
+    >
+      bold</label
+    >
+    <input type="checkbox" id="italic" name="italic" value="italic" /><label
+      for="italic"
+    >
+      italic</label
+    >
+    <input
+      type="checkbox"
+      id="underline"
+      name="underline"
+      value="underline"
+    /><label for="underline"> underline</label>
+    <br />
+    <br />
+
+    <input type="radio" id="red" name="color" value="red" />
+    <label for="red">red</label>
+
+    <input type="radio" id="blue" name="color" value="blue" />
+    <label for="blue">blue</label>
+
+    <input type="radio" id="green" name="color" value="green" />
+    <label for="green">green</label>
+    <br />
+    <br />
+    <div id="div1">
+      <p id="operationResult"></p>
+    </div>
+    <br />
+  </body>
+  <script src="script2.js"></script>
+</html>

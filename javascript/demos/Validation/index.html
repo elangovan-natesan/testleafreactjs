@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <form id="myForm" action="">
+      <label for="name">Name : </label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        placeholder="enter name"
+        required
+      /><br />
+      <br />
+      <label for="email">Email : </label>
+      <input
+        type="text"
+        id="email"
+        name="email"
+        placeholder="enter email"
+        required
+      /><br />
+      <br />
+      <label for="password">Password : </label>
+      <input
+        type="text"
+        id="password"
+        name="password"
+        placeholder="enter password"
+        required
+      /><br />
+      <br />
+      <label for="confirmPassword">Confirm Password : </label>
+      <input
+        type="text"
+        id="confirmPassword"
+        name="confirmPassword"
+        placeholder="re-enter password"
+        required
+      /><br />
+      <br />
+      <button type="submit" name="action" value="Submit">Submit</button>
+      <button type="reset" onclick="handleReset()">Reset</button
+      ><!--In onclick the function name cannot be reset()-->
+      <!--here value attribute does not acts as a label & acts as a form data name=value pair during form submission if name attribute is used here-->
+    </form>
+    <p id="errorMessage"></p>
+  </body>
+  <script src="script.js"></script>
+</html>
