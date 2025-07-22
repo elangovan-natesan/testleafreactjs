@@ -13,7 +13,7 @@ let person = {
 person.age = 29;
 console.log("person : ", person);
 
-let updatedPerson = { ...person, age: 29 }; //updates the age pty in person object//this is immutablity, not disturbing the original object//functional programming
+let updatedPerson = { ...person, age: 30 }; //updates the age pty in person object//this is immutablity, not disturbing the original object//functional programming
 console.log("updated person : ", updatedPerson);
 
 // b)first class function
