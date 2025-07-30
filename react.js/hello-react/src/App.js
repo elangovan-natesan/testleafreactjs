@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { Activity } from "./Activity";
 import Hobbies from "./Hobbies";
 import Greeting from "./Greeting";
+import Counter from "./states/Counter";
+import Inputdynamic from "./states/Inputdynamic";
+import Employee from "./passing-data-from-child-to-parent/Employee";
+import Student from "./passing-data-from-child-to-parent/Student";
+import DataFetchingComponent from "./effects/DataFetchingComponent";
 
 function App() {
-  //Here App is a component
+  //Here App is a component. It is a primary component or parent component or root component
 
   const role = "Software Developer";
   const nameList = ["ramesh", "suresh", "pankaj", "shankar"];
@@ -14,6 +19,14 @@ function App() {
     { id: 3, name: "pankaj", age: 27 },
     { id: 4, name: "shankar", age: 28 },
   ];
+  const [empCount, setEmpCount] = useState(0); //its scope Is visible to only this component
+  const [stdCount, setStdCount] = useState(0); //its scope Is visible to only this component
+  const empHandler = (data) => {
+    setEmpCount(data);
+  };
+  const stdHandler = (data) => {
+    setStdCount(data);
+  };
   return (
     <div>
       <header style={{ textAlign: "center" }}>
@@ -29,6 +42,8 @@ function App() {
         This is a simple react app created using CRA uses JSX syntax extension.
       </p>
       <hr />
+      Total Employees : {empCount} | Total Students : {stdCount}
+      <hr />
       <Activity />
       <Hobbies />
       <Greeting
@@ -37,6 +52,11 @@ function App() {
         nameList={nameList}
         employees={employees}
       />
+      <Counter />
+      <Inputdynamic />
+      <Employee empCount={empCount} empHandler={empHandler} />
+      <Student stdCount={stdCount} stdHandler={stdHandler} />
+      <DataFetchingComponent />
     </div>
   );
 }

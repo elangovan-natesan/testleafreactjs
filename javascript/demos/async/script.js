@@ -39,6 +39,7 @@ async function myAsyncFunction() {
   //   return message;
 }
 myAsyncFunction(); //way to call an async function if it does not returns value
+
 // async function normalFunction() {
 //   let returned = await myAsyncFunction();
 //   console.log(returned);

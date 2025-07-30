@@ -13,6 +13,7 @@ function displayCourses() {
   //   });
 
   courses.forEach((course, index) => {
+    //forEach does not handle await or promises
     //forEach does not return anything
     let listItem = document.createElement("li");
     listItem.innerHTML = `${course.title} by ${course.instructor} within ${course.duration}

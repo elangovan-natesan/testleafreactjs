@@ -1,4 +1,4 @@
-// functional programming dont disyurb the existing pty
+// functional programming means dont disturb the existing pty & Functional programming makes heavy use of pure functions first-class functions and HOFs.
 // a)Immutability
 // In FP, data is immutable, meaning once a value is set, it cant be changed. Instead of modifying an array, we create a new array.
 let arr = [1, 2, 3];
@@ -10,19 +10,26 @@ let person = {
   age: 28,
   isStudent: false,
 }; //Js object
-person.age = 29;
-console.log("person : ", person);
+person.age = 29; //this is mutability means mutates or changes the original object.
+console.log("person : ", person); //changed or mutated object.
 
-let updatedPerson = { ...person, age: 30 }; //updates the age pty in person object//this is immutablity, not disturbing the original object//functional programming
+let updatedPerson = { ...person, age: 30 }; //updates the age pty in person object//this is immutablity, not disturbing the original object by using spread operator//functional programming
 console.log("updated person : ", updatedPerson);
 
 // b)first class function
+// Definition: In JavaScript, functions are first-class citizens. That means:
+// Functions can be assigned to variables.
+// Functions can be passed as arguments to other functions.
+// Functions can be returned from other functions.
 function f1() {}
 function f2(f1) {}
 
 const greet = (f1) => f1(f2); //ES6 //first class function allows to assign a function to a variable and allows to pass function as an argument and able to return a function
 
 // c)Higher Order Function
+// Definition: A Higher-Order Function is a function that does one or both of:
+// Takes another function as an argument
+// Returns another function
 
 function add(x, y) {
   return x + y;
