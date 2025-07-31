@@ -19,8 +19,8 @@ const routes = (app) => {
   app.get("/employees", getEmployees); //browser supports get request & through curl command(curl http://localhost:5000/employees) in terminal we can get it & through postman
   app.get("/employees/:id", getEmployeeById); //browser supports get request & through curl command(curl http://localhost:5000/employees/4) we can get it & through postman
   app.post("/employees", addEmployee); //note: record can be created only with postman or curl command in terminal & browser dont supports post method
-  app.put("/employees/:id", updateEmployee);
-  app.delete("/employees/:id", deleteEmployee);
+  app.put("/employees/:id", updateEmployee); //note: record can be updated only with postman or curl command in terminal & browser dont supports put method
+  app.delete("/employees/:id", deleteEmployee); //note: record can be deleted only with postman or curl command in terminal & browser dont supports delete method
 };
 
 export { router, routes }; // this is ES6 module syntax (or) module syntax introduced from ES6 for using this we need package.json file with "type": "module"

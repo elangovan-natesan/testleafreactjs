@@ -62,15 +62,31 @@ const addEmployee = (req, res) => {
 
 const updateEmployee = (req, res) => {
   const id = parseInt(req.params.id); //get the id from the request parameters
-
   const updatedEmployee = { id: id, ...req.body };
-  const indexOfEmployee = employeeDetails.indexOf(
-    employeeDetails.find((employee) => employee.id === id)
-  ); //indexOf returns the index of first ocuurence if present else it will return -1.
+  //or
+  // const updatedEmployee = {
+  //   id: id,
+  //   name: req.body.name,
+  //   salary: req.body.salary,
+  // };
+  const indexOfEmployee = employeeDetails.findIndex(
+    (employee) => employee.id === id
+  );
+  //or
+  // const indexOfEmployee = employeeDetails.indexOf(
+  //   employeeDetails.find((employee) => employee.id === id)
+  // ); //indexOf returns the index of first ocuurence if present else it will return -1.
   // console.log("index of : " + indexOfEmployee);//prints the index
-
-  employeeDetails.splice(indexOfEmployee, 1, updatedEmployee); //update the employeeDetails array with the updated employee details
-  return res.status(200).send(updatedEmployee);
+  if (indexOfEmployee !== -1) {
+    // employeeDetails.splice(indexOfEmployee, 1, updatedEmployee); //update the employeeDetails array with the updated employee details
+    //or
+    employeeDetails[indexOfEmployee] = updatedEmployee;
+    return res.status(200).send(updatedEmployee);
+  } else {
+    return res
+      .status(404)
+      .json({ message: "record not found with id : " + id });
+  }
 };
 
 const deleteEmployee = (req, res) => {
@@ -82,11 +98,15 @@ const deleteEmployee = (req, res) => {
       }
     })
   );
-  console.log("index of : " + indexOfEmployee); //prints the index
-
-  employeeDetails.splice(indexOfEmployee, 1);
-
-  return res.status(200).send("Record Deleted Successfully");
+  // console.log("index of : " + indexOfEmployee); //prints the index
+  if (indexOfEmployee !== -1) {
+    employeeDetails.splice(indexOfEmployee, 1);
+    return res.status(200).send("Record Deleted Successfully");
+  } else {
+    return res
+      .status(404)
+      .json({ message: "record not found with id : " + id });
+  }
 };
 
 export {
