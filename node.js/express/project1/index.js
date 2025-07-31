@@ -1,23 +1,26 @@
 // import express from "express"; // to use import statement we need to use "type":"module" in package.json file (or) use .mjs extension instead of .js for the entry point file.
 // import { employeeDetails } from "./data/employees.mjs"; // import employee details from data/employees.mjs file
-const express = require("express"); //to use this we need to install express package (or) library (or) dependency
-const { employeeDetails } = require("./data/employees.js"); //import employee details from data
+const express = require("express"); //CJS syntax //to use this we need to install express package (or) library (or) dependency
+const { employeeDetails } = require("./data/employees.js"); //CJS syntax //import employee details from data
 console.log("node project is working");
 
 // get post put delete - CRUD operations
 const app = express(); //create an express application
 
 const mw1 = (req, res, next) => {
+  //middle ware function
   console.log(req.method);
   next(); //next() is used to call the next middleware function in the stack
 };
 
 const mw2 = (req, res, next) => {
+  //middle ware function
   console.log(req.url);
   next(); //next() is used to call the next middleware function in the stack
 };
 
 const mw3 = (req, res, next) => {
+  //middle ware function
   console.log(req.url);
   next();
 };
@@ -47,5 +50,6 @@ app.get("/employees", (req, res) => {
 });
 
 app.listen(4000, () => {
+  //if you did not give this then server will not started & Node.js will run the file,nothing will listen for incoming HTTP requests
   console.log("server is running on port http://localhost:4000");
 });

@@ -21,5 +21,6 @@ const employeeDetails = [
   },
 ];
 
-module.exports = { employeeDetails }; //export employee details to use in other files if we use require
-// if we use import statement then we need to use export statement in this file
+module.exports = { employeeDetails }; //CommonJS syntax (or) CJS syntax //exports employee details to use in other files if we use require
+// if we use import statement then we need to use export statement in this file //this is module syntax
+//NOTE:another CJS syntax is `exports.employeeDetails = employeeDetails;`
