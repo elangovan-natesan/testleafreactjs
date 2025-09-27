@@ -42,3 +42,30 @@ NOTE: To use JS variable inside JSX then we should enclose it inside curly brack
    effect hook
    - component life
    - fetch data from services - service(express.js) will get data from backend
+
+## Controlled Component & Uncontrolled Component
+
+-Element = Component
+-Form
+
+- elements(textbox, radio, checkbox, ...)
+
+- controlled by react is called controlled component (we can go with controlled component when we have ex. big form or other components)
+- controlled by DOM is called uncontrolled component (we can go with uncontrolled component when we e have ex. small form or other components)
+
+## useReducer - hook
+
+# why
+
+useState is great for simple scenarios where you're managing one or two state values, but when things get more complex, useReducer is a better choice.
+
+# when to use useState
+
+when you only need to manage a few simple state values
+Example: Tracking the value of a single input field
+
+# when to use useReducer
+
+when you have multiple pieces of state taht are related.
+when the state transitions depend on the type of actions(e.g,. setting values, resetting form fields).
+when you want to make your state logic easier to read & maintain, especially as your app grows.

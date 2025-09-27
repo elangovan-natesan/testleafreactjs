@@ -7,6 +7,9 @@ import Inputdynamic from "./states/Inputdynamic";
 import Employee from "./passing-data-from-child-to-parent/Employee";
 import Student from "./passing-data-from-child-to-parent/Student";
 import DataFetchingComponent from "./effects/DataFetchingComponent";
+import LoginForm from "./elements/LoginForm";
+import LoginForm3 from "./elements/LoginForm3";
+import RegistrationLoginForm from "./elements/RegistrationLoginForm";
 
 function App() {
   //Here App is a component. It is a primary component or parent component or root component
@@ -57,6 +60,9 @@ function App() {
       <Employee empCount={empCount} empHandler={empHandler} />
       <Student stdCount={stdCount} stdHandler={stdHandler} />
       <DataFetchingComponent />
+      <LoginForm />
+      <LoginForm3 />
+      <RegistrationLoginForm />
     </div>
   );
 }

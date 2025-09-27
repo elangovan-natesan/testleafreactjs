@@ -47,16 +47,16 @@
           <th>salary</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody align="center">
         <tr>
-          <td align="center">elango</td>
+          <td>elango</td>
           <td>28</td>
           <td>30000</td>
           <td rowspan="2">June</td>
         </tr>
 
         <tr>
-          <td align="center">elango</td>
+          <td>elango</td>
           <td>28</td>
           <td>30000</td>
         </tr>
@@ -65,42 +65,52 @@
     <br />
     <hr />
     <fieldset>
+      <!-- creates box -->
       <legend>Registration</legend>
       <form action="home.html">
         <table>
           <tr>
             <td>Name:</td>
             <td>
-              <input type="text" size="20" /><!-- doubt size is not working-->
+              <input
+                type="text"
+                placeholder="enter name"
+                name="name"
+                value=""
+                size="20"
+              /><!-- doubt size is not working-->
             </td>
           </tr>
           <tr>
             <td>Password:</td>
             <td>
-              <input type="password" />
+              <input
+                type="password"
+                placeholder="enter password"
+                name="password"
+                value=""
+              />
             </td>
           </tr>
           <tr>
             <td>Gender:</td>
             <td>
-              <input type="radio" name="gender" checked />Male<input
-                type="radio"
-                name="gender"
-              />Female
+              <input type="radio" name="gender" value="Male" checked />Male
+              <input type="radio" name="gender" value="Female" />Female
             </td>
           </tr>
           <tr>
             <td>Skills:</td>
             <td>
-              <input type="checkbox" checked />HTML<input
-                type="checkbox"
-              />CSS<input type="checkbox" />JS
+              <input type="checkbox" name="skills" value="HTML" />HTML
+              <input type="checkbox" name="skills" value="CSS" />CSS
+              <input type="checkbox" name="skills" value="JS" />JS
             </td>
           </tr>
           <tr>
             <td>Qualification :</td>
             <td>
-              <select>
+              <select name="qualification">
                 <option value="ME" selected>ME</option>
                 <option value="MSC">MSC</option>
                 <option value="M.Phil">M.Phil</option>
@@ -110,7 +120,13 @@
           <tr>
             <td>Address :</td>
             <td>
-              <textarea rows="5" cols="50"></textarea>
+              <textarea
+                rows="5"
+                cols="50"
+                name="address"
+                value=""
+                placeholder="enter address"
+              ></textarea>
             </td>
           </tr>
           <tr>
