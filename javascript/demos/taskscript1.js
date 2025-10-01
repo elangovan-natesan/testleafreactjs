@@ -3,7 +3,7 @@ function displayWelcomeMessage() {
   let enteredColor = document.getElementById("color").value;
 
   //   enteredName.style.color = enteredColor;
-  let resultElement = document.getElementById("result");
-  resultElement.style.color = enteredColor;
-  resultElement.innerHTML = "Welcome " + "<b>" + enteredName + "</b>!";
+  let resultDiv = document.getElementById("result");
+  resultDiv.innerHTML = "Welcome <b>" + enteredName + "</b>!";
+  resultDiv.style.color = enteredColor;
 }

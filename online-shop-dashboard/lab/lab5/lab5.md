@@ -1,24 +1,46 @@
-Lab 4: CSS Introduction – Applying Styles to Dashboard
-Objective
-Learn core CSS concepts and apply styling to your Online Shop Admin Dashboard created in previous labs.
+# Lab 5: Advanced CSS & Responsive Dashboard
 
-Lab Instructions
-1️⃣ In your online-shop-dashboard folder, create a new file named lab4.html and copy your structure from lab3.html.
+## Objective
 
-2️⃣ Create a new file named styles.css in the same folder.
+Apply **advanced CSS techniques and responsive design** to your Online Shop Admin Dashboard, making it clean and mobile-friendly.
 
-3️⃣ Link your styles.css in the <head> of your lab4.html:
+---
 
-<link rel="stylesheet" href="styles.css">
-4️⃣ In styles.css, apply the following:
+## Lab Instructions
 
-Body: Set a clean sans-serif font and a light background color.
-Header: Center the text and add padding.
-Navigation: Style the nav with a background color, horizontal links, and spacing.
-Main Content: Add padding and clear section headings.
-Table: Add borders, padding, and alternate row coloring.
-Form: Style inputs and button with padding and clear alignment.
-Footer: Center text with a dark background and white text.
-5️⃣ Open using Live Server to see your styling in real time.
+1️⃣ In your `online-shop-dashboard` folder, create a new file `lab5.html` by copying your structure from `lab4.html`.
 
-6️⃣ Take a screenshot (lab5_output.png) for your lab folder.
+2️⃣ Create a new CSS file `styles_lab5.css` to keep your previous styles intact while experimenting with advanced CSS.
+
+3️⃣ Link `styles_lab5.css` in your `<head>`:
+
+```html
+<link rel="stylesheet" href="styles_lab5.css">
+```
+
+4️⃣ In `styles_lab5.css`, apply:
+
+✅ **Flexbox and Grid:**
+
+- Use `display: flex` for your `nav ul` to align items and handle wrapping on smaller screens.
+- Create a simple `grid` layout in `main` for sections on wider screens.
+
+✅ **Hover Effects:**
+
+- Add subtle hover effects to `nav a` and buttons.
+
+✅ **Media Queries:**
+
+- At `max-width: 768px`, make navigation stack vertically.
+- Ensure table responsiveness by allowing horizontal scrolling if needed.
+- Adjust padding and font sizes for mobile.
+
+✅ **Consistent Color Palette:**
+
+- Use 2-3 colors consistently for branding.
+
+5️⃣ Take a screenshot (`lab5_output.png`) and save it in your lab folder.
+
+---
+
+## 📌 Expected Output Placeholder

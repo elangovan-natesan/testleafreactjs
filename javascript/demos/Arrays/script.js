@@ -73,7 +73,8 @@ function addCourse() {
     courses.push(newCourse); //appends new element to the end of an array
     // courses.unshift(newCourse); //inserts new element to the start of an array
   } else {
-    alert("please entre a course name");
+    //this means false or "" this block will get executed
+    alert("please enter a course name");
   }
   displayCourses();
 }

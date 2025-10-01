@@ -57,10 +57,8 @@ function performOperation() {
   document.getElementById("operationResult").innerText =
     "result is : " + result;
 
-  console.log("checkbox value bold : " + document.getElementById("bold").value);
-  console.log(
-    "radio button value red : " + document.getElementById("red").value
-  );
+  // console.log("checkbox value : " + document.getElementById("bold").value);
+  // console.log("radio button value : " + document.getElementById("red").value);
 
   let selectedColor = document.getElementsByName("color"); //returns list of radio button elements which has name attribute value as color.
 
@@ -70,6 +68,6 @@ function performOperation() {
       break;
     }
   }
-  console.log("type of : " + selectedColor);
-  console.log("value of : " + selectedColor);
+  console.log("type of : " + typeof selectedColor); //object
+  console.log("value of : " + selectedColor); //nodelist
 }
