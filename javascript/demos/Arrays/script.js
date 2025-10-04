@@ -56,9 +56,10 @@ function addCourse() {
   for (let i = 0; i < courses.length; i++) {
     if (courses[i] == newCourse) {
       courseExists = true;
-      break; //Is an unconditional statement only exit from the loop.
+      break; //Is an unconditional statement only exit from the for loop.
     }
   }
+  document.getElementById("newCourse").value = "";
   if (courseExists) {
     alert("course already exists!");
     return; //Is an unconditional statement exit from the function
@@ -91,6 +92,8 @@ function removeCourse() {
   } else {
     alert("No Course Found!");
   }
+  document.getElementById("removeCourse").value = "";
+
   //   courses.pop(); //removes last element from the array
   //   courses.shift(); //removes first element from the array
   displayCourses();

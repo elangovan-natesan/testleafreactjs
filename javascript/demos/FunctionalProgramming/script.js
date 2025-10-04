@@ -2,7 +2,7 @@
 // a)Immutability
 // In FP, data is immutable, meaning once a value is set, it cant be changed. Instead of modifying an array, we create a new array.
 let arr = [1, 2, 3];
-newArray = [...arr, 4, 5, 6]; //spread operator
+newArray = [...arr, 4, 5, 6]; //spread operator//immutability
 console.log("array : ", newArray); ///proper way to log array in the console
 
 let person = {

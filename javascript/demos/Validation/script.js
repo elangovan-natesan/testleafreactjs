@@ -1,5 +1,6 @@
-document.getElementById("myForm").addEventListener("submit", function (event) {
-  event.preventDefault(); //stops the form from submitting and stops reloading
+// document.getElementById("myForm").addEventListener("submit", function (event) {//use onsubmit eventhandler in html or use eventListener in js file & dont use onclick in submit button
+function handleSubmit(e) {
+  e.preventDefault(); //stops the form from submitting and stops reloading
   alert("form submitted");
   let name = document.getElementById("name").value;
   let email = document.getElementById("email").value;
@@ -8,8 +9,9 @@ document.getElementById("myForm").addEventListener("submit", function (event) {
   let errorMessage = document.getElementById("errorMessage");
 
   try {
+    //try block throws the error & catch block catches the error
     if (!name || !email || !password || !confirmPassword) {
-      //checks whether the values are empty or not
+      //checks whether the values are empty or false then this block will get executed
       throw new Error("All fields are required!");
     } else if (!/^[a-zA-Z\s]+$/.test(name)) {
       throw new Error("Name should only contains letters & spaces");
@@ -30,7 +32,8 @@ document.getElementById("myForm").addEventListener("submit", function (event) {
     errorMessage.style.color = "red";
     errorMessage.textContent = error.message; //textContent or innerText
   }
-});
+}
+// );
 
 function handleReset() {
   document.getElementById("errorMessage").innerText = ""; //textContent or innerText
